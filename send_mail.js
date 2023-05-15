@@ -5,7 +5,7 @@ const send_mail=async (obj)=>{
     const {from,to,subject,html,attachments}=obj;
     try{
         let sender=mailer.createTransport({
-            host:'smtp-relay.sendinblue.com',
+            host:'localhost:5000',
             port:587,
             auth:{
                 user:process.env.user,
